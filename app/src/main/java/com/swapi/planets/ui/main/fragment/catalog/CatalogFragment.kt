@@ -54,7 +54,7 @@ class CatalogFragment : Fragment() {
 
         mainAdapter = MainAdapter(
             listPlanets = emptyList(),
-            listenerPlanet = { toDetailPlanet(it) }
+            listenerPlanet = { url, img -> toDetailPlanet(url, img) }
         )
         binding.catalogRv.apply {
             adapter = mainAdapter
@@ -79,9 +79,9 @@ class CatalogFragment : Fragment() {
         }
     }
 
-    private fun toDetailPlanet(url: String) {
+    private fun toDetailPlanet(url: String, img: String) {
         findNavController().navigate(
-            CatalogFragmentDirections.actionCatalogFragmentToDetailFragment(url)
+            CatalogFragmentDirections.actionCatalogFragmentToDetailFragment(url, img)
         )
     }
 }

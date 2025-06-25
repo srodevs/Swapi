@@ -1,5 +1,6 @@
 package com.swapi.planets.ui.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +13,7 @@ import com.swapi.planets.databinding.ItemPlanetBinding
 
 class MainAdapter(
     private var listPlanets: List<PlanetResponse>,
-    private val listenerPlanet: (String) -> Unit
+    private val listenerPlanet: (String, String) -> Unit
 ) : RecyclerView.Adapter<MainAdapter.WallViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WallViewHolder {
@@ -32,15 +33,16 @@ class MainAdapter(
 
         fun bindWalls(
             planetResponse: PlanetResponse,
-            listPlanets: (String) -> Unit
+            listPlanets: (String, String) -> Unit
         ) {
+            val selectedImg = getRandomImg()
             binding.itemPlanetTvTitle.text = planetResponse.name
-            Glide.with(binding.root.context).load(getRandomImg())
+            Glide.with(binding.root.context).load(selectedImg)
                 .centerCrop()
                 .apply(RequestOptions.circleCropTransform())
                 .into(binding.itemPlanetIv)
             binding.itemPlanetCvContainer.setOnClickListener {
-                listPlanets(planetResponse.url.orEmpty())
+                listPlanets(planetResponse.url.orEmpty(), selectedImg)
             }
         }
     }
@@ -61,6 +63,7 @@ class MainAdapter(
         return listPlanets.random()
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun updateList(listPlanet: List<PlanetResponse>) {
         this.listPlanets = listPlanet
         notifyDataSetChanged()
