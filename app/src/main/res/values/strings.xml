@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Swapi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="all_logo_description">Logo SWAPI</string>
+
+
+    <string name="register_hint_name">Nombre</string>
+    <string name="register_hint_lastname_father">Apuellido Paterno</string>
+    <string name="register_hint_lastname_mother">Apellido materno</string>
+    <string name="register_hint_born">Fecha de Nacimiento</string>
+    <string name="register_hint_country">Logo SWAPI</string>
+    <string name="register_hint_btn_register">Registrarme</string>
+    <string name="register_msg_fill_all">Ingresa todos los campos</string>
+
 </resources>

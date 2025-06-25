@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registerMainCL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.fragment.register.RegisterFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/registerGuidelineV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/registerGuidelineV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerTilName"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="@id/registerGuidelineV2"
+        app:layout_constraintStart_toStartOf="@id/registerGuidelineV1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/register_hint_name"
+            android:inputType="textCapWords" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerTilLastnameFather"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="@id/registerGuidelineV2"
+        app:layout_constraintStart_toStartOf="@id/registerGuidelineV1"
+        app:layout_constraintTop_toTopOf="@id/registerTilName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/register_hint_lastname_father"
+            android:inputType="textCapWords" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerTilLastnameMother"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="@id/registerGuidelineV2"
+        app:layout_constraintStart_toStartOf="@id/registerGuidelineV1"
+        app:layout_constraintTop_toTopOf="@id/registerTilLastnameFather">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/register_hint_lastname_mother"
+            android:inputType="textCapWords" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerTilBorn"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="@id/registerGuidelineV2"
+        app:layout_constraintStart_toStartOf="@id/registerGuidelineV1"
+        app:layout_constraintTop_toTopOf="@id/registerTilLastnameMother">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/registerTietBorn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:focusable="false"
+            android:hint="@string/register_hint_born" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/registerCodeCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:ccp_showFlag="false"
+        app:ccp_showFullName="true"
+        app:ccp_showNameCode="false"
+        app:ccp_showPhoneCode="false"
+        app:layout_constraintEnd_toEndOf="@id/registerGuidelineV2"
+        app:layout_constraintStart_toStartOf="@id/registerGuidelineV1"
+        app:layout_constraintTop_toBottomOf="@id/registerTilBorn" />
+
+    <Button
+        android:id="@+id/registerBtnRegister"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/register_hint_btn_register"
+        app:layout_constraintEnd_toEndOf="@id/registerGuidelineV2"
+        app:layout_constraintStart_toStartOf="@id/registerGuidelineV1"
+        app:layout_constraintTop_toBottomOf="@id/registerCodeCountry" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
