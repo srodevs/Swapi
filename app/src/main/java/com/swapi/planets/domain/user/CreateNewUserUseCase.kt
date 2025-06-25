@@ -1,4 +1,4 @@
-package com.swapi.planets.domain
+package com.swapi.planets.domain.user
 
 import android.util.Log
 import com.swapi.planets.data.UserRepository

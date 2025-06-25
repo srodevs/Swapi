@@ -1,4 +1,4 @@
-package com.swapi.planets.domain
+package com.swapi.planets.domain.user
 
 import com.swapi.planets.core.SharedPrefs
 import javax.inject.Inject

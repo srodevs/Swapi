@@ -38,5 +38,9 @@
         android:id="@+id/detailFragment"
         android:name="com.swapi.planets.ui.main.fragment.detail.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="planetUrl"
+            app:argType="string" />
+    </fragment>
 </navigation>

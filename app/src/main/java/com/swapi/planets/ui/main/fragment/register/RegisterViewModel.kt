@@ -1,10 +1,9 @@
 package com.swapi.planets.ui.main.fragment.register
 
-import android.util.Printer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.swapi.planets.core.SharedPrefs
-import com.swapi.planets.domain.CreateNewUserUseCase
+import com.swapi.planets.domain.user.CreateNewUserUseCase
 import com.swapi.planets.ui.model.UserModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
