@@ -34,7 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/style_bg_arrow_back"
         android:contentDescription="@string/all_icon_description"
         android:padding="8dp"
         android:src="@drawable/round_arrow_back"
@@ -46,11 +47,101 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:gravity="center"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/detailGuidelineV2"
         app:layout_constraintStart_toStartOf="@id/detailGuidelineV1"
-        app:layout_constraintTop_toBottomOf="@id/detailIvPlanet" />
+        app:layout_constraintTop_toBottomOf="@id/detailIvPlanet"
+        tools:text="Nombre del planeta" />
+
+    <TextView
+        android:id="@+id/detailTvRotation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/detailGuidelineV2"
+        app:layout_constraintStart_toStartOf="@id/detailGuidelineV1"
+        app:layout_constraintTop_toBottomOf="@id/detailTvTitle"
+        tools:text="Rotation:" />
+
+    <TextView
+        android:id="@+id/detailTvOrbital"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/detailGuidelineV2"
+        app:layout_constraintStart_toStartOf="@id/detailGuidelineV1"
+        app:layout_constraintTop_toBottomOf="@id/detailTvRotation"
+        tools:text="Orbital:" />
+
+    <TextView
+        android:id="@+id/detailTvDiameter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/detailGuidelineV2"
+        app:layout_constraintStart_toStartOf="@id/detailGuidelineV1"
+        app:layout_constraintTop_toBottomOf="@id/detailTvOrbital"
+        tools:text="Diameter:" />
+
+    <TextView
+        android:id="@+id/detailTvClimate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/detailGuidelineV2"
+        app:layout_constraintStart_toStartOf="@id/detailGuidelineV1"
+        app:layout_constraintTop_toBottomOf="@id/detailTvDiameter"
+        tools:text="Climate:" />
+
+    <TextView
+        android:id="@+id/detailTvGravity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/detailGuidelineV2"
+        app:layout_constraintStart_toStartOf="@id/detailGuidelineV1"
+        app:layout_constraintTop_toBottomOf="@id/detailTvClimate"
+        tools:text="Gravity:" />
+
+    <TextView
+        android:id="@+id/detailTvTerrain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/detailGuidelineV2"
+        app:layout_constraintStart_toStartOf="@id/detailGuidelineV1"
+        app:layout_constraintTop_toBottomOf="@id/detailTvGravity"
+        tools:text="Terrain:" />
+
+    <TextView
+        android:id="@+id/detailTvSurface"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/detailGuidelineV2"
+        app:layout_constraintStart_toStartOf="@id/detailGuidelineV1"
+        app:layout_constraintTop_toBottomOf="@id/detailTvTerrain"
+        tools:text="Surface:" />
+
+    <TextView
+        android:id="@+id/detailTvPopulation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/detailGuidelineV2"
+        app:layout_constraintStart_toStartOf="@id/detailGuidelineV1"
+        app:layout_constraintTop_toBottomOf="@id/detailTvSurface"
+        tools:text="Population:" />
 
     <com.google.android.material.progressindicator.CircularProgressIndicator
         android:id="@+id/detailPb"

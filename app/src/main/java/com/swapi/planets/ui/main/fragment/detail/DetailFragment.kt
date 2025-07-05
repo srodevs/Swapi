@@ -1,6 +1,8 @@
 package com.swapi.planets.ui.main.fragment.detail
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.text.SpannableStringBuilder
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +12,8 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
+import com.swapi.planets.R
+import com.swapi.planets.core.xInBold
 import com.swapi.planets.data.network.model.PlanetResponse
 import com.swapi.planets.databinding.FragmentDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -51,7 +54,6 @@ class DetailFragment : Fragment() {
         binding.detailPb.isVisible = true
         Glide.with(binding.root.context).load(argImg)
             .centerCrop()
-            .apply(RequestOptions.circleCropTransform())
             .into(binding.detailIvPlanet)
     }
 
@@ -70,9 +72,23 @@ class DetailFragment : Fragment() {
         }
     }
 
-    private fun showInfo(planetResponse: PlanetResponse) {
+    @SuppressLint("SetTextI18n")
+    private fun showInfo(planet: PlanetResponse) {
         binding.detailPb.isVisible = false
-        binding.detailTvTitle.text = planetResponse.name
+        binding.detailTvTitle.text = planet.name
+        binding.detailTvRotation.text = setTxtBold(R.string.detail_Rotation, planet.rotationPeriod)
+        binding.detailTvOrbital.text = setTxtBold(R.string.detail_Orbital, planet.orbitalPeriod)
+        binding.detailTvDiameter.text = setTxtBold(R.string.detail_Diameter, planet.diameter)
+        binding.detailTvClimate.text = setTxtBold(R.string.detail_Climate, planet.climate)
+        binding.detailTvGravity.text = setTxtBold(R.string.detail_Gravity, planet.gravity)
+        binding.detailTvTerrain.text = setTxtBold(R.string.detail_Terrain, planet.terrain)
+        binding.detailTvSurface.text = setTxtBold(R.string.detail_Surface, planet.surfaceWater)
+        binding.detailTvPopulation.text = setTxtBold(R.string.detail_Population, planet.population)
+    }
+
+    private fun setTxtBold(idString: Int, valor: String?): SpannableStringBuilder {
+        val label = getString(idString).xInBold()
+        return SpannableStringBuilder().append(label).append(" ").append(valor)
     }
 
     private fun extractIdFromUrl(url: String): String? {

@@ -16,4 +16,14 @@
     <string name="register_hint_btn_register">Registrarme</string>
     <string name="register_msg_fill_all">Ingresa todos los campos</string>
 
+    <string name="detail_Rotation">Rotation: </string>
+    <string name="detail_Orbital">Orbital: </string>
+    <string name="detail_Diameter">Diameter: </string>
+    <string name="detail_Climate">Climate: </string>
+    <string name="detail_Gravity">Gravity: </string>
+    <string name="detail_Terrain">Terrain: </string>
+    <string name="detail_Surface">Surface: </string>
+    <string name="detail_Population">Population: </string>
+
+
 </resources>
