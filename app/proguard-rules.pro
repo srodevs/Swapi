@@ -19,3 +19,7 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# keep dataclass
+-keepclassmembers class com.swapi.planets.data.network.model. ** {*;}
+-keepclassmembers class com.swapi.planets.ui.model. ** {*;}
