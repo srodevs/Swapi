@@ -51,9 +51,6 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.navigation.fragment.ktx)
@@ -65,15 +62,21 @@ dependencies {
     implementation(libs.glide)
     ksp(libs.compiler)
 
-    // retrofit
+    // ---------------- test
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    testImplementation(libs.junit)
+    testImplementation(libs.mockk)
+
+    // ---------------- retrofit
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.logging.interceptor)
 
-    // hilt
+    // ---------------- hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
 
-    // picker country
+    // ---------------- picker country
     implementation(libs.ccp)
 }
