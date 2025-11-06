@@ -1,6 +1,18 @@
 # Swapi
 > Prueba técnica para Desarrollador Android
 
+## 🎥 Demo
+
+<p align="center">
+  <a href="previews/screenrecord.mp4">
+    <img src="/previews/screenshot.png" width="75%" alt="Demo de la app"/>
+  </a>
+</p>
+<p align="center">
+  <em>Haz clic en la imagen para ver la demo en video (MP4)</em>
+</p>
+
+
 ## Descripción
 Swapi es una aplicación desarrollada en Kotlin para Android que permite consumir datos de la API pública de SWAPI (“Star Wars API”) para mostrar información relacionada con el universo de Star Wars.  
 El propósito de este proyecto es demostrar habilidades en arquitectura Android, consumo de API, manejo de datos, UI/UX y buenas prácticas de desarrollo móvil.
