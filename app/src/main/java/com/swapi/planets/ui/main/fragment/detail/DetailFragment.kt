@@ -3,6 +3,7 @@ package com.swapi.planets.ui.main.fragment.detail
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.SpannableStringBuilder
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +15,7 @@ import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.swapi.planets.R
 import com.swapi.planets.core.xInBold
-import com.swapi.planets.data.network.model.PlanetResponse
+import com.swapi.planets.data.network.response.PlanetResponse
 import com.swapi.planets.databinding.FragmentDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -60,6 +61,7 @@ class DetailFragment : Fragment() {
     private fun initListeners() {
         binding.detailIvBack.setOnClickListener {
             findNavController().popBackStack()
+            Log.e("TAG", "initListeners: ")
         }
     }
 
@@ -73,17 +75,17 @@ class DetailFragment : Fragment() {
     }
 
     @SuppressLint("SetTextI18n")
-    private fun showInfo(planet: PlanetResponse) {
-        binding.detailPb.isVisible = false
-        binding.detailTvTitle.text = planet.name
-        binding.detailTvRotation.text = setTxtBold(R.string.detail_Rotation, planet.rotationPeriod)
-        binding.detailTvOrbital.text = setTxtBold(R.string.detail_Orbital, planet.orbitalPeriod)
-        binding.detailTvDiameter.text = setTxtBold(R.string.detail_Diameter, planet.diameter)
-        binding.detailTvClimate.text = setTxtBold(R.string.detail_Climate, planet.climate)
-        binding.detailTvGravity.text = setTxtBold(R.string.detail_Gravity, planet.gravity)
-        binding.detailTvTerrain.text = setTxtBold(R.string.detail_Terrain, planet.terrain)
-        binding.detailTvSurface.text = setTxtBold(R.string.detail_Surface, planet.surfaceWater)
-        binding.detailTvPopulation.text = setTxtBold(R.string.detail_Population, planet.population)
+    private fun showInfo(planet: PlanetResponse) = with(binding) {
+        detailPb.isVisible = false
+        detailTvTitle.text = planet.name
+        detailTvRotation.text = setTxtBold(R.string.detail_Rotation, planet.rotationPeriod)
+        detailTvOrbital.text = setTxtBold(R.string.detail_Orbital, planet.orbitalPeriod)
+        detailTvDiameter.text = setTxtBold(R.string.detail_Diameter, planet.diameter)
+        detailTvClimate.text = setTxtBold(R.string.detail_Climate, planet.climate)
+        detailTvGravity.text = setTxtBold(R.string.detail_Gravity, planet.gravity)
+        detailTvTerrain.text = setTxtBold(R.string.detail_Terrain, planet.terrain)
+        detailTvSurface.text = setTxtBold(R.string.detail_Surface, planet.surfaceWater)
+        detailTvPopulation.text = setTxtBold(R.string.detail_Population, planet.population)
     }
 
     private fun setTxtBold(idString: Int, valor: String?): SpannableStringBuilder {

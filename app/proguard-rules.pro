@@ -21,5 +21,5 @@
 #-renamesourcefileattribute SourceFile
 
 # keep dataclass
--keepclassmembers class com.swapi.planets.data.network.model. ** {*;}
+-keepclassmembers class com.swapi.planets.data.network.response. ** {*;}
 -keepclassmembers class com.swapi.planets.ui.model. ** {*;}

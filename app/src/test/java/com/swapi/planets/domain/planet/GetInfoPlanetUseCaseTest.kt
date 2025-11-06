@@ -1,10 +1,9 @@
 package com.swapi.planets.domain.planet
 
 import com.swapi.planets.data.network.PlanetService
-import com.swapi.planets.data.network.model.PlanetResponse
+import com.swapi.planets.data.network.response.PlanetResponse
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
-import io.mockk.impl.annotations.MockK
 import io.mockk.impl.annotations.RelaxedMockK
 import kotlinx.coroutines.runBlocking
 import org.junit.Before

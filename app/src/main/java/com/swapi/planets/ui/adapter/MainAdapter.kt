@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.swapi.planets.R
 import com.swapi.planets.core.Constants
-import com.swapi.planets.data.network.model.PlanetResponse
+import com.swapi.planets.data.network.response.PlanetResponse
 import com.swapi.planets.databinding.ItemPlanetBinding
 
 class MainAdapter(

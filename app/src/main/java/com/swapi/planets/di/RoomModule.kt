@@ -1,4 +1,4 @@
-package com.swapi.planets.data.di
+package com.swapi.planets.di
 
 import android.content.Context
 import androidx.room.Room

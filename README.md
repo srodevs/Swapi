@@ -9,11 +9,14 @@ El propósito de este proyecto es demostrar habilidades en arquitectura Android,
 - Kotlin
 - Android SDK
 - Jetpack (ViewModel, LiveData/StateFlow, etc)
-- Retrofit (o equivalente) para consumo de API
+- Retrofit para consumo de API
 - Coroutines para asincronía
-- Arquitectura MVVM (o la que hayas elegido)
+- Arquitectura MVVM 
 - Gradle (Kotlin DSL)
-- [Opcional] Librerías para UI, DI, testing, etc.
+- Dagger Hilt 
+- Navigation Component
+- Mockk (para test)
+- ccp (libreria para codigos de numeros de paises)
 
 ## Instalación / Inicio rápido
 1. Clona el repositorio:
@@ -25,7 +28,7 @@ El propósito de este proyecto es demostrar habilidades en arquitectura Android,
 
 ## Funcionalidades
 
-- Listado de personajes / naves / planetas (según lo que consuma la API). 
+- Listado de personajes / planetas (según lo que consuma la API). 
 - Detalle de cada elemento seleccionado. 
 - Manejo de estados: carga, éxito, error. 
 - UI limpia y responsiva. 

@@ -1,4 +1,4 @@
-package com.swapi.planets.data.di
+package com.swapi.planets.di
 
 import com.swapi.planets.data.network.ApiPlanet
 import dagger.Module
@@ -10,6 +10,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.security.SecureRandom
+import java.security.cert.X509Certificate
 import javax.inject.Singleton
 import javax.net.ssl.SSLContext
 import javax.net.ssl.TrustManager
@@ -58,18 +59,18 @@ object RetrofitModule {
     private fun createUnsafeOkHttpClient(): OkHttpClient {
         val trustAllCerts = arrayOf<TrustManager>(object : X509TrustManager {
             override fun checkClientTrusted(
-                chain: Array<java.security.cert.X509Certificate>,
+                chain: Array<X509Certificate>,
                 authType: String
             ) {
             }
 
             override fun checkServerTrusted(
-                chain: Array<java.security.cert.X509Certificate>,
+                chain: Array<X509Certificate>,
                 authType: String
             ) {
             }
 
-            override fun getAcceptedIssuers(): Array<java.security.cert.X509Certificate> = arrayOf()
+            override fun getAcceptedIssuers(): Array<X509Certificate> = arrayOf()
         })
 
         val sslContext = SSLContext.getInstance("SSL").apply {

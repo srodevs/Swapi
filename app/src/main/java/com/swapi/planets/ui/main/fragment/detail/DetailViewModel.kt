@@ -2,7 +2,7 @@ package com.swapi.planets.ui.main.fragment.detail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.swapi.planets.data.network.model.PlanetResponse
+import com.swapi.planets.data.network.response.PlanetResponse
 import com.swapi.planets.domain.planet.GetInfoPlanetUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

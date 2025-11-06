@@ -1,7 +1,7 @@
 package com.swapi.planets.data.network
 
-import com.swapi.planets.data.network.model.MainResponse
-import com.swapi.planets.data.network.model.PlanetResponse
+import com.swapi.planets.data.network.response.MainResponse
+import com.swapi.planets.data.network.response.PlanetResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

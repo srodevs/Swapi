@@ -1,7 +1,7 @@
 package com.swapi.planets.domain.planet
 
 import com.swapi.planets.data.network.PlanetService
-import com.swapi.planets.data.network.model.PlanetResponse
+import com.swapi.planets.data.network.response.PlanetResponse
 import javax.inject.Inject
 
 class GetInfoPlanetUseCase @Inject constructor(
